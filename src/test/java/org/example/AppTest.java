@@ -53,7 +53,7 @@ public class AppTest
     @Test
     public void testRandomTheme() {
 
-        /*Тест */
+        /*Оставляем тестовый комментарий*/
         $(By.xpath("//button/span[contains(text(), 'Категория')]/..")).should(Condition.visible).click();
         $(By.xpath("//a[@class='btn btn-link']")).should(Condition.visible).click();
 
@@ -68,6 +68,7 @@ public class AppTest
 
     @Test
     public void testThemeRepeat() {
+        /*Повторяем тест, но с другим комминтарием*/
         ElementsCollection collection = $$(By.xpath("//span[@class='thread-detail-replies' and not(preceding-sibling::span)]/ancestor::div[3]/a"));
         collection.get((int) (collection.size()*Math.random())).shouldBe(Condition.visible).click();
         $(By.xpath("//div[@class='col-sm-4 hidden-xs']/button[@class='btn btn-primary btn-block btn-outline']")).shouldHave(text("Ответить")).click();
