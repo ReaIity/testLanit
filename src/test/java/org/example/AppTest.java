@@ -29,7 +29,7 @@ public class AppTest
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         WebDriverRunner.setWebDriver(driver);
-        Configuration.timeout = 3;
+        Configuration.timeout = 3000;
 
     }
 
